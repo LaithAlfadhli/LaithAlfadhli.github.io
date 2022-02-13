@@ -1,0 +1,520 @@
+html,body { 
+    background-color: black;
+    width:100%;
+    height: 100%;
+
+    
+ }
+ body{
+  min-height: 100%;
+}
+ 
+* {
+    box-sizing: border-box;
+  }
+
+  .menu {
+    width: 25%;
+    float: left;
+  }
+  .main {
+    width: 75%;
+    float: left;
+  }
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.SidebarLeft
+{
+    position: fixed;
+  
+    clear: right;
+    background-color: black;
+    width: 16.6%;
+    top:    0; /*down 25 % of thge viewheight*/
+    height: 100%; /*make a box 50% of the view screen*/
+    left: 0;      /*to the left*/
+    z-index: 1; /*bring element forward*/
+
+}
+.SidebarTop
+{
+    float: left;
+    clear: both;
+    background-color: black;
+    width: 100%;
+    height:auto; /*make a box 50% of the view screen*/
+    left: 0;      /*to the left*/
+    z-index: 1; /*bring element forward*/
+
+}
+.SidebarRight
+{
+    
+    position: fixed; /*absoulte to keep it in place*/
+    background-color: black;
+    width: 16.6%;
+    top:    0; /*down 25 % of thge viewheight*/
+    height: 100%; /*make a box 50% of the view screen*/
+    right: 0;     /*to the right*/
+    z-index: 1; /*send element backward with -1 default appears to be 0*/
+    
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 1vh;
+    
+    position: relative;
+    z-index: 0;
+    margin-bottom: 1%;
+    height: auto;
+    flex: auto;
+    
+    
+  }
+h1,h2{
+  margin: 0%;
+  padding: 0%;
+}
+
+.TextBox
+{
+    text-align: center;
+    color: white;
+    padding: 10px;
+    
+}
+.centreText
+{
+  margin: auto;
+  width: 60%;
+  
+}
+
+  .fill-height-or-more > div {
+    flex: 1;
+  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .sideBar{
+    background-color: yellow;
+    height: auto;
+    
+
+  }
+  .invisGridPadding {
+    background-color: yellow;
+    border: 1px solid white;
+    
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+.button{
+  display: block;
+
+  padding:0.35em 1.2em;
+  border:0.1em solid #FFFFFF;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:#0c0c0c;
+  text-align:center;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+button:hover{
+  color:#000000;
+  background-color:#FFFFFF;
+  }
+.verticalAllignYoutube
+{
+  position: relative;
+  bottom: -10vh;
+}
+
+
+.container article {
+  display: block;
+ /* border : solid 1px blue;*/
+}
+
+.container {
+  background-color: rgb(26, 26, 26);
+  border : solid 1px rgb(116, 23, 23);
+  border-radius: 50px;
+  display: grid;
+  flex: auto;
+  grid-column-gap: 2em; /* horizontal gap between articles */
+  grid-template-columns: repeat(2, 1fr);
+
+  grid-template-areas: "header1 header2 header3" 
+                       "section1 section2 section3"
+                       "footer1 footer2 footer3"
+                       "header4" 
+                       "section4 "
+                       "footer4 "
+}
+
+article:nth-child(1) header {
+  grid-area: header1;
+}
+article:nth-child(2) header {
+  grid-area: header2;
+}
+article:nth-child(3) header {
+  grid-area: header3;
+}
+article:nth-child(4) header {
+  grid-area: header4;
+}
+article:nth-child(1) section {
+  grid-area: section1;
+}
+article:nth-child(2) section {
+  grid-area: section2;
+}
+article:nth-child(3) section {
+  grid-area: section3;
+}
+article:nth-child(4) section {
+  grid-area: section4;
+}
+article:nth-child(1) footer {
+  grid-area: footer1;
+}
+article:nth-child(2) footer {
+  grid-area: footer2;
+}
+article:nth-child(3) footer {
+  grid-area: footer3;
+}
+article:nth-child(4) footer {
+  grid-area: footer4;
+}
+
+article:nth-child(n + 4) header {
+  margin-top: 1em;
+}
+
+.theButtons{
+  width: 90%;
+  margin: auto;
+  padding: 15px;
+
+    position: relative;
+    z-index: 0;
+    /*
+    border-style: solid;
+    border-right-color: blue;
+    border-top-color: blue;
+    border-left-color: white;
+    border-bottom-color: white;
+    */
+    height: inherit; 
+}
+.redOutline
+{
+  border : solid 1px rgb(116, 23, 23);
+  border-radius: 50px;
+  margin: 2%;
+}
+
+.blueOutline
+{
+  border : solid 1px blue;
+}
+
+.allignCenter
+{
+  
+  height: 100%;
+
+
+  display: flex;
+
+
+  align-items: center;
+
+
+  justify-content: center;
+}
+
+.left
+{
+  float: left;
+  
+}
+.right
+{
+  float: right;
+  
+}
+
+*, ::before { 
+  box-sizing: border-box;
+}
+
+*, ::after { 
+  box-sizing: border-box;
+}
+
+.grayBackground
+{
+  height: auto;
+  width: 100%;
+  background-color: rgb(26, 26, 26);
+}
+
+
+.videoContainer {
+  float: left;
+  position: relative;
+  width: 90%;
+  height: 0;
+  padding-bottom: 56.25%;
+  background-color: rgb(26, 26, 26);
+  margin: auto;
+}
+
+.video{
+  background-color: rgb(26, 26, 26);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.imgContainer {
+  float: left;
+  position: relative;
+  width: 95%;
+  height: auto;
+  padding-bottom: 100%;
+  background-color: rgb(26, 26, 26);
+  margin: auto;
+}
+
+.img{
+  position: absolute;
+  top: 0;
+  left: 0;  
+}
+
+
+.socialBar ul
+{
+
+  display:inline;
+  list-style-type:circle;
+  color: #f9f9f9;
+
+}
+
+.socialBar
+{ 
+  border-top: 1px solid black;
+  background-color: rgb(26, 26, 26);
+  width: 100%;
+  height: auto;
+ 
+
+}
+
+.socialMedia
+{
+  list-style-type:none;
+  color: #f9f9f9;
+
+}
+.socialBar ul li
+{
+  display:inline;
+  padding-left: 25px;
+  padding-right: 25px;
+
+}
+
+i{
+  display: block;
+  color: #FFFFFF;
+  width: max-content;
+  height: max-content;
+}
+
+
+.pageBackground
+{
+  background-color: rgb(26, 26, 26);
+  height:100%;
+  margin: auto;
+  width: 66.66%;
+}
+.topnav {
+  background-color: rgb(26, 26, 26);;
+  width: 66.66%;
+  margin: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.rightHorBar
+{
+  width:33%;
+  float: right;
+
+} 
+.leftHorBar
+{
+  width:66%;
+
+  float:left;
+
+}
+
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  background-color: rgb(26, 26, 26);
+  float: left;
+  color: #f2f2f2;
+  width: 100%;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.rightHorBar a
+{
+  width:50%;
+
+}  
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.horiNavSpace{
+  background-color: rgb(26, 26, 26);
+}
+
+.PageTop
+{
+  margin-top: 1px;
+}
+
+
+ul 
+{
+
+  
+  list-style-type:circle;
+  color: #f9f9f9;
+
+}
+
+li
+{
+  display:list-item;
+  text-align: left;
+  padding-left: 25px;
+  padding-right: 25px;
+
+}
+
+
+.containerSize
+{
+  width: 50%;
+
+}
+
+.containerSizeLeftAbout
+{
+  width: 65%;
+
+}
+
+.containerSizeRightAbout
+{
+  width: 35%;
+
+}
+
+img {
+  width: 300px;
+  height: 420px;
+  object-fit:fill;
+}
+
+ul li ul{
+  list-style-type:none;
+}
+
+.skillsAbout
+{
+  float: left;
+  
+}
+
+.imgAbout
+{
+  /*1250px put left and change width to 100*/
+  float: right;
+  
+}
