@@ -357,7 +357,6 @@ article:nth-child(n + 4) header {
 .socialBar
 { 
   border-top: 1px solid black;
-  background-color: rgb(26, 26, 26);
   width: 100%;
   height: auto;
  
@@ -389,13 +388,13 @@ i{
 .pageBackground
 {
   background-color: rgb(26, 26, 26);
-  height:100%;
+  height:auto;
   margin: auto;
-  width: 66.66%;
+  width: 50%;
 }
 .topnav {
   background-color: rgb(26, 26, 26);;
-  width: 66.66%;
+  width: 50%;
   margin: auto;
   height: auto;
   display: flex;
