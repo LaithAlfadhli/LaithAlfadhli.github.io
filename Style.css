@@ -436,6 +436,21 @@ i{
 
 }  
 
+a 
+{
+  color: #FFFFFF;
+}
+
+a:hover 
+{
+  color: #04AA6D;
+}
+
+a:visited 
+{
+  color: #FFFFFF;
+}
+
 /* Change the color of links on hover */
 .topnav a:hover {
   background-color: #ddd;
